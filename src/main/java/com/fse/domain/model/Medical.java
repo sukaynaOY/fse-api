@@ -2,13 +2,11 @@ package com.fse.domain.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 import org.hibernate.annotations.Immutable;
 import java.math.BigInteger;
+import java.time.LocalDateTime;
 
 @Entity
 @Immutable // Marks the entity as read-only
@@ -25,4 +23,7 @@ public class Medical {
     private Long id;
     private String nomMedicament;
     private BigInteger prix;
+    @Column(name = "created", nullable = false)
+    private LocalDateTime created;  // Ensure this field exists
+//
 }

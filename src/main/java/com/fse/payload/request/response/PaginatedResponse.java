@@ -1,31 +1,18 @@
 package com.fse.payload.request.response;
 
+import com.fse.domain.model.Clinique;
+import com.fse.domain.model.Medical;
 import lombok.*;
 
 import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder @ToString
-
+@Builder
+@ToString
 public class PaginatedResponse {
-    private List<?> medicalList;
-    private List<?> analyseList;
-    private List<?> cliniqueList;
-
-    private int medicalPage;
-    private int analysePage;
-    private int cliniquePage;
-
-    private int medicalTotalPages;
-    private int analyseTotalPages;
-    private int cliniqueTotalPages;
-
-    private long medicalTotalCount;
-    private long analyseTotalCount;
-    private long cliniqueTotalCount;
-
-
-    // Getters and setters
+    private List<Medical> medicalData;  // List of Medical data
+    private List<Clinique> cliniqueData; // List of Clinique data List of Clinique data
 }

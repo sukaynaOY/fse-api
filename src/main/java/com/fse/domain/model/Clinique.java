@@ -2,12 +2,11 @@ package com.fse.domain.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 import org.hibernate.annotations.Immutable;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Immutable // Marks the entity as read-only
@@ -24,4 +23,6 @@ public class Clinique {
     private Long id;
     private String nomClinique;
     private String address;
+    @Column(name = "created", nullable = false)
+    private LocalDateTime created;
 }
